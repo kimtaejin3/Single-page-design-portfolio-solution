@@ -43,7 +43,7 @@ img {
 
 /* layout */
 .l_wrapper {
-    max-width: 1100px;
+    max-width: 1110px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -58,7 +58,7 @@ img {
 .l_col {
     box-sizing: border-box;
     padding: 0 10px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .l_col_12_12 {
@@ -100,6 +100,7 @@ img {
 
 /* commons */
 .btn {
+    font-size: 1.3rem;
     display: inline-block;
     background-color: var(--black);
     color: var(--white);
@@ -110,6 +111,8 @@ img {
 .btn.type_salmon {
     background-color: var(--salmon);
 }
+
+
 
 .container {
     display: flex;
@@ -124,10 +127,12 @@ img {
 }
 
 /* component */
+html, body {
+    overflow-x:hidden 
+} 
 
 body {
     background-color: var(--bg);
-    /* font-size: 1.2rem; */
 }
 
 .headings {
@@ -144,8 +149,12 @@ body {
 .section {
 }
 
-.section:nth-child(2) {
+.section.type_mt--100{
     margin-top: 100px;
+}
+
+.section.type_mt--80{
+    margin-top: 80px;
 }
 
 .primaryText {
@@ -260,6 +269,76 @@ body {
     font-size: 1.8rem;
 }
 
+
+
+/* slide */
+
+.section-title{
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom:40px;
+}
+
+.slide_wrap{
+}
+
+.slide{
+    width: 2820px;
+    display: flex;
+    gap: 30px;
+    margin-left: -840px;
+    /* transition: all 1s; */
+}
+
+.slide-item{
+    border-radius: 10px;
+    overflow: hidden;
+    flex-basis: 542px;
+    height: 385px;
+    flex-shrink: 0;
+    background-color: pink;
+}
+
+.slide-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.slide-item:hover img{
+    transform: scale(1.1);    
+}
+
+.slide-navigation{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.navigation__btn{
+    background-color: var(--black);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navigation__btn:hover{
+    background-color: var(--purple);
+}
+
+/* footer */
+.footer{
+    margin-bottom:60px;
+}
+
+
+/* media query */
 @media (max-width: 923px) {
     .container {
         gap: 50px;
@@ -427,5 +506,14 @@ body {
 
     .intro .btn {
         margin: 0 auto;
+    }
+
+    .slide{
+        gap: 10px;
+    }
+
+    .slide-item{
+        flex-basis: 270px;
+        height: 180px;
     }
 }

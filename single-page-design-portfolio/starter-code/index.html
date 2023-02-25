@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, user-scalable=yes" />
 
         <link
             rel="icon"
@@ -11,6 +11,7 @@
             href="./assets/favicon-32x32.png"
         />
         <link rel="stylesheet" href="style.css" />
+        <script src="./index.js" defer></script>
         <title>
             Frontend Mentor | Single-page design portfolio By Taejin Kim
         </title>
@@ -45,7 +46,7 @@
 
                     <ul class="l_row">
                         <li
-                            class="l_col l_col_4_12 l_tablet_col_4_12 l_mobile_col_12_12"
+                            class="l_col l_col_4_12 l_tablet_col_6_12 l_mobile_col_12_12"
                         >
                             <div class="technav_wrap">
                                 <a href="#" class="technav type_purple">
@@ -58,7 +59,7 @@
                             </div>
                         </li>
                         <li
-                            class="l_col l_col_4_12 l_tablet_col_4_12 l_mobile_col_12_12"
+                            class="l_col l_col_4_12 l_tablet_col_6_12 l_mobile_col_12_12"
                         >
                             <div class="technav_wrap">
                                 <a
@@ -117,7 +118,7 @@
                         </li>
                     </ul>
                 </section>
-                <section class="section">
+                <section class="section type_mt--100">
                     <div class="container">
                         <div class="container-cover">
                             <img src="./assets/image-amy.webp" alt="amy" />
@@ -143,9 +144,54 @@
                         </div>
                     </div>
                 </section>
-                <section class="section">...</section>
-                <section class="section">...</section>
+                <!-- type_slide -> 임시 클래스명 -->
+                <section class="section type_mt--80">
+                    <h3 class="section-title">My Work</h3>
+                    <div class="slide_wrap">
+                        <ul class="slide">
+                            <li class="slide-item">
+                                <img src="./assets/image-slide-1.jpg" alt="">
+                            </li>
+                            <li class="slide-item">
+                                <img src="./assets/image-slide-2.jpg" alt="">
+                            </li>
+                            <li class="slide-item">
+                                <img src="./assets/image-slide-3.jpg" alt="">
+                            </li>
+                            <li class="slide-item">
+                                <img src="./assets/image-slide-4.jpg" alt="">
+                            </li>
+                            <li class="slide-item">
+                                <img src="./assets/image-slide-5.jpg" alt="">
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="slide-navigation">
+                        <a class="navigation__btn type_prev">
+                            <img src="./assets/icon-arrow-left.svg" alt="">
+                        </a>
+                        <a class="navigation__btn type_next">
+                            <img src="./assets/icon-arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </section>
+                <!-- <section class="section">...</section> -->
             </div>
         </main>
+
+
+        <footer class="footer">
+            <div class="l_wrapper">
+
+                <section class="footer-card">...</section>
+                <div class="headings">
+                    <h1 class="header-title">
+                        <a href="#"><img src="./assets/logo.svg" alt="" /></a>
+                    </h1>
+                    <a href="#" class="btn">Free Consultation</a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
