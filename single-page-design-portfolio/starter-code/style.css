@@ -100,30 +100,40 @@ img {
 
 /* commons */
 .btn {
-    font-size: 1.3rem;
-    display: inline-block;
+    font-size: 1.6rem;
     background-color: var(--black);
     color: var(--white);
-    padding: 14px 30px;
-    border-radius: 25px;
+    padding: 18px 45px;
+    border-radius: 28px;
+}
+
+.btn:hover{
+    background-color: var(--purple);
 }
 
 .btn.type_salmon {
     background-color: var(--salmon);
 }
 
-
+.btn.type_salmon:hover{
+    background-color: var(--orange);
+}
 
 .container {
     display: flex;
     align-items: center;
     gap: 119px;
+    justify-content: space-between;
 }
 
 .container-cover {
     flex-basis: 450px;
     flex-shrink: 0;
     aspect-ratio: 1;
+}
+
+.container-sidebar{
+    flex-shrink: 0;
 }
 
 /* component */
@@ -135,6 +145,7 @@ body {
     background-color: var(--bg);
 }
 
+/* component - header */
 .headings {
     display: flex;
     align-items: center;
@@ -142,12 +153,13 @@ body {
     padding-top: 20px;
 }
 
+/* component - main */
+
 .contents {
     padding: 70px 0;
 }
 
-.section {
-}
+.section {}
 
 .section.type_mt--100{
     margin-top: 100px;
@@ -158,7 +170,7 @@ body {
 }
 
 .primaryText {
-    max-width: 752px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 70px;
@@ -207,11 +219,12 @@ body {
     opacity: 0.8;
 }
 
-.technav.type_2 {
+
+.technav.type_width_full {
     width: 100%;
 }
 
-.technav.type_2_2 {
+.technav.type_width_half {
     width: 45%;
 }
 
@@ -271,7 +284,7 @@ body {
 
 
 
-/* slide */
+/* component-main-slide */
 
 .section-title{
     font-size: 3.2rem;
@@ -279,15 +292,11 @@ body {
     margin-bottom:40px;
 }
 
-.slide_wrap{
-}
-
 .slide{
     width: 2820px;
     display: flex;
     gap: 30px;
     margin-left: -840px;
-    /* transition: all 1s; */
 }
 
 .slide-item{
@@ -332,9 +341,28 @@ body {
     background-color: var(--purple);
 }
 
-/* footer */
+/* component-footer */
 .footer{
     margin-bottom:60px;
+}
+
+.card{
+    background-color: var(--black);
+    color: var(--white);
+    padding:80px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-title{
+    font-size: 3.2rem;
+    margin-bottom:20px;
+}
+
+.card-description{
+    font-size: 1.8rem;
+    max-width: 540px;
+    color: var(--bg);
 }
 
 
@@ -346,6 +374,7 @@ body {
 }
 
 @media (max-width: 850px) {
+   
     .l_tablet_col_12_12 {
         width: 100%;
     }
@@ -383,11 +412,11 @@ body {
         width: 8.33333333%;
     }
 
-    .technav.type_tablet_2 {
+    .technav.type_tablet_width_full {
         width: 100%;
     }
 
-    .technav.type_tablet_2_2 {
+    .technav.type_tablet_width_half {
         width: 46%;
     }
 
@@ -417,6 +446,10 @@ body {
         gap: 60px;
     }
 
+    .container.type_fdc{
+        flex-direction: column;
+    }
+
     .intro h3 {
         font-size: 3.2rem;
     }
@@ -424,8 +457,10 @@ body {
 
 @media (max-width: 698px) {
     .l_wrapper {
-        padding: 0 10px;
+        padding: 0 20px;
     }
+
+
     .l_mobile_col_12_12 {
         width: 100%;
     }
@@ -463,15 +498,15 @@ body {
         width: 8.33333333%;
     }
 
-    .technav.type_mobile_2 {
+    .technav.type_mobile_width_full {
         width: 100%;
     }
 
-    .technav.type_mobile_2_2 {
+    .technav.type_mobile_width_half {
         width: 46%;
     }
 
-    /* tablet 에서 요소에 클래스로 추가되는 type_tablet_height_half을 없애주고자 */
+    /* tablet 에서 요소에 클래스로 추가되는 type_tablet_height_half때문에 작성 */
     .technav_wrap.type_mobile_height_full {
         height: 364px;
     }
@@ -516,4 +551,28 @@ body {
         flex-basis: 270px;
         height: 180px;
     }
+
+    .card{
+        text-align: center;
+        padding: 80px 40px;
+    }
+
+    .card-title{
+        font-size: 2.6rem;
+    }
+    
+    .card-description{
+        font-size: 1.6rem;
+    }
+
+    .btn_typeMobile {
+        font-size: 1.2rem;
+        padding: 15px 28px;
+        border-radius: 28px;
+    }
+    
+    .btn.type_salmon {
+        background-color: var(--salmon);
+    }
+
 }
